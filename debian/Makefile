@@ -268,7 +268,8 @@ $(BASE_SRC):
 	elif [ -f $(SRCPATH)/nginx_$(BASE_VERSION).orig.tar.gz ]; then \
 		cp -P $(SRCPATH)/nginx_$(BASE_VERSION).orig.tar.gz $(BASE_SRC) ; \
 	else \
-		apt source nginx \
+		apt source nginx; \
+		cp -P $(SRCPATH)/nginx_$(BASE_VERSION).orig.tar.gz $(BASE_SRC) ; \
 	fi ; \
 	}
 
