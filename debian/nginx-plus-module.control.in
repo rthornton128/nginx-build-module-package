@@ -26,7 +26,7 @@ Architecture: any
 Section: debug
 Priority: extra
 Depends: nginx-plus-r%%PLUS_VERSION%%,
-         nginx-plus-module-%%MODULE%% (= %%VERSION_PREFIX%%%%MODULE_VERSION%%-%%MODULE_RELEASE%%~%%CODENAME%%),
+         nginx-plus-module-%%MODULE%% (= %%VERSION_PREFIX%%%%MODULE_VERSION%%-%%MODULE_RELEASE%%+%%CODENAME%%),
          ${misc:Depends}
 Description: debug symbols for the nginx-plus-module-%%MODULE%%
  %%SHORT_SUMMARY%% for NGINX Plus (debug symbols)
