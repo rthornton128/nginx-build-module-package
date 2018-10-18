@@ -311,8 +311,7 @@ if [ "$BUILD_PLATFORM" = "OSS" ]; then
 	if [ "$OSS_VER" != "" ]; then
 		MERCURIAL_TAG="-r $OSS_VER-1"
 	fi
-	#hg clone $MERCURIAL_TAG http://hg.nginx.org/pkg-oss
-	git clone https://git.acromedia.com/acro/nginx-build-module-package.git
+	git clone https://github.com/rthornton128/nginx-build-module-package.git
 	cd pkg-oss/$PACKAGING_DIR
 else
 	wget -O - http://hg.nginx.org/pkg-oss/archive/target-plus-r$PLUS_REL.tar.gz  | tar xfz -
