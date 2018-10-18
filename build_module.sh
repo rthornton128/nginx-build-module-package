@@ -154,13 +154,6 @@ else
 fi
 
 if [ $CHECK_DEPENDS = 1 ]; then
-	echo "$ME: INFO: testing sudo"
-	sudo pwd > /dev/null
-	if [ $? -ne 0 ]; then
-	        echo "ERROR: sudo failed. If you do not have sudo credentials then try using the '--skip-depends' option. Quitting."
-	        exit 1
-	fi
-
 	echo "$ME: INFO: checking for dependent packages"
 	CORE_PACKAGES="gcc make unzip wget"
 	if [ "$BUILD_PLATFORM" = "OSS" ]; then
