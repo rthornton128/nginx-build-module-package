@@ -311,7 +311,8 @@ if [ "$BUILD_PLATFORM" = "OSS" ]; then
 	if [ "$OSS_VER" != "" ]; then
 		MERCURIAL_TAG="-r $OSS_VER-1"
 	fi
-	hg clone $MERCURIAL_TAG http://hg.nginx.org/pkg-oss
+	#hg clone $MERCURIAL_TAG http://hg.nginx.org/pkg-oss
+	git clone https://git.acromedia.com/acro/nginx-build-module-package.git
 	cd pkg-oss/$PACKAGING_DIR
 else
 	wget -O - http://hg.nginx.org/pkg-oss/archive/target-plus-r$PLUS_REL.tar.gz  | tar xfz -
@@ -321,7 +322,7 @@ if [ $? -ne 0 ]; then
 	echo "$ME: ERROR: Unable to obtain NGINX packaging tool - quitting"
 	exit 1
 fi
-
+exit 0
 #
 # Archive the module source for use with packaging tool using the base OSS version
 #
