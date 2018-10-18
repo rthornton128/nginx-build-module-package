@@ -322,7 +322,7 @@ if [ $? -ne 0 ]; then
 	echo "$ME: ERROR: Unable to obtain NGINX packaging tool - quitting"
 	exit 1
 fi
-exit 0
+
 #
 # Archive the module source for use with packaging tool using the base OSS version
 #

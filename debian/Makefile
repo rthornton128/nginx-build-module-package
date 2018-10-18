@@ -1,7 +1,7 @@
 SHELL=		/bin/bash
 
-BASE_VERSION=	1.15.5
-BASE_RELEASE=	1
+BASE_VERSION=	1.14.0
+BASE_RELEASE=	0
 PLUS_VERSION=	15
 BASE_SRC=	nginx-$(BASE_VERSION).tar.gz
 SRCDIR=		nginx-$(BASE_VERSION)
@@ -21,7 +21,7 @@ endif
 MODULE_PACKAGE_VENDOR=	Sergey Budnevitch <sb@nginx.com>
 MODULE_PACKAGE_URL=	http://nginx.org/
 
-CODENAME=	$(shell lsb_release -cs)
+CODENAME=	$(shell lsb_release -cs)2
 ARCH=		$(shell uname -m)
 NPROC=		$(shell getconf _NPROCESSORS_ONLN)
 MODSRC_PREFIX=	extra/
@@ -268,7 +268,7 @@ $(BASE_SRC):
 	elif [ -f $(SRCPATH)/nginx_$(BASE_VERSION).orig.tar.gz ]; then \
 		cp -P $(SRCPATH)/nginx_$(BASE_VERSION).orig.tar.gz $(BASE_SRC) ; \
 	else \
-		wget http://nginx.org/download/$(BASE_SRC) ; \
+		apt source nginx \
 	fi ; \
 	}
 
