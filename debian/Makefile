@@ -269,7 +269,7 @@ $(BASE_SRC):
 		cp -P $(SRCPATH)/nginx_$(BASE_VERSION).orig.tar.gz $(BASE_SRC) ; \
 	else \
 		apt source nginx; \
-		cp -P $(SRCPATH)/nginx_$(BASE_VERSION).orig.tar.gz $(BASE_SRC) ; \
+		cp -P nginx_$(BASE_VERSION).orig.tar.gz $(BASE_SRC) ; \
 	fi ; \
 	}
 
